@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>7h</title>
+</head>
+
+<body>
+  <script>
+    function convertLength(length, from, to) {
+      let lengthConvert = 0;
+      let result = '';
+
+      if (from === 'miles' && to === 'km') {
+        lengthConvert = length * 1.6;
+
+      } else if (from === 'km' && to === 'miles') {
+        lengthConvert = length / 1.6;      
+        
+      } else if (from === 'miles' && to === 'ft') {
+        lengthConvert = length * 5280;    
+        
+      } else if (from === 'ft' && to === 'miles') {
+        lengthConvert = length / 5280;    
+
+      } else if (from === 'km' && to === 'ft') {
+        lengthConvert = length * 3281;      
+
+      } else if (from === 'ft' && to === 'km') {
+        lengthConvert = length / 3281;      
+        
+      } else if (from === to) {
+        lengthConvert = length;      
+      }
+
+      result = `${lengthConvert} ${to}`;
+    
+      return result;
+    }
+
+    const length1 = convertLength(50, 'miles', 'km');
+    const length2 = convertLength(32, 'km', 'miles');
+    const length3 = convertLength(50, 'km', 'km');
+    const length4 = convertLength(50, 'miles', 'miles');
+    
+    const length5 = convertLength(5, 'miles', 'km');
+    const length6 = convertLength(5, 'miles', 'ft');
+    const length7 = convertLength(5, 'km', 'ft');
+    const length8 = convertLength(26400, 'ft', 'miles');
+    const length9 = convertLength(16405, 'ft', 'km');
+    const length10 = convertLength(5, 'ft', 'ft');
+  </script>
+</body>
+
+</html>
