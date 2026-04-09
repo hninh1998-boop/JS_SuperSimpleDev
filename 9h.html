@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>9h</title>
+</head>
+
+<body>  
+  <input placeholder="Type something"
+  onkeyup="
+    const pElement = document.querySelector('.js-p');
+    
+    if (event.key === 'Backspace') {
+      pElement.innerHTML = pElement.innerHTML.slice(0, -1);
+    } else {
+      pElement.innerHTML += event.key;
+    }
+  ">
+  <p class="js-p"></p>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>9c</title>
+</head>
+
+<body>
+  <button onclick="
+    clickButton('heads');
+  ">heads</button>
+  
+  <button onclick="
+    clickButton('tails');
+  ">tails</button>
+  
+  <p class="js-result"></p>
+
+  <script>
+    function clickButton(value) {
+      document.querySelector('.js-result')
+        .innerHTML = `You chose: ${value}`;
+    }
+  </script>
+</body>
+
+</html>
