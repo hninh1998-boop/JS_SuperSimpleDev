@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>10g</title>
+  <link rel="stylesheet" href="10g.css">
+</head>
+
+<body>
+  <button class="btn js-game-btn"
+  onclick="
+    toggleClass('.js-game-btn', '.js-music-btn', '.js-tech-btn');
+  ">Gaming</button>
+
+  <button class="btn js-music-btn"
+  onclick="
+    toggleClass('.js-music-btn', '.js-game-btn', '.js-tech-btn');
+  ">Music</button>
+
+  <button class="btn js-tech-btn"
+  onclick="
+    toggleClass('.js-tech-btn', '.js-game-btn', '.js-music-btn');
+  ">Tech</button>
+
+  <script src="10g.js"></script>
+</body>
+
+</html>
