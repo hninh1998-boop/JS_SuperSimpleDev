@@ -35,26 +35,36 @@ const todoList3 = [{
   dueDate: '2022-12-22'
 }];
 
+document.querySelector('.js-add-todo-button')
+  .addEventListener('click', () => {
+    addTodo3();
+  });
+
 renderTodoList3();
 
 function renderTodoList3() {
   let todoListHTML3 = '';
 
-  todoList3.forEach(function(todoObject3, index) {
+  todoList3.forEach((todoObject3, index) => {
     const { name, dueDate } = todoObject3;
     const html = `
       <div>${name}</div>
       <div>${dueDate}</div>
-      <button onclick="
-        todoList3.splice(${index},1);
-        renderTodoList3
-      " class = "del-todo-btn">Delete</button>
+      <button class = "del-todo-btn js-delete-todo-button">Delete</button>
     `;
     todoListHTML3 += html;
   });
 
-  const divElement = document.querySelector('.js-div3');
-  divElement.innerHTML = todoListHTML3;
+  document.querySelector('.js-div3')
+    .innerHTML = todoListHTML3;
+
+  document.querySelectorAll('.js-delete-todo-button')
+    .forEach((deleteButton, index) => {
+      deleteButton.addEventListener('click', () => {
+        todoList3.splice(index,1);
+        renderTodoList3();
+      })
+    });
 }
 
 function addTodo3() {
