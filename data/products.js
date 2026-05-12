@@ -656,5 +656,23 @@ const products = [
       "apparel",
       "mens"
     ]
+  }, {
+    id: "id1",
+    image: "images/products/backpack.jpg",
+    name: "BackPack - Ninh ID1",
+    rating: {
+      stars: 4,
+      count: 699
+    },
+    priceCents: 1234
+  }, {
+    id: "id2",
+    image: "images/products/umbrella.jpg",
+    name: "Umbrella - Ninh ID2",
+    rating: {
+      stars: 3.5,
+      count:7878
+    },
+    priceCents: 456
   }
 ];
