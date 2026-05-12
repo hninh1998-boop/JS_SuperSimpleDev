@@ -1,5 +1,11 @@
 let isStart = false;
 
+document.querySelector('.js-button')
+  .addEventListener('click', () => {
+    setTimeout(changeText, 1000);
+    setLoadingText();   
+  })
+
 function changeText() {
   const buttonElement = document.querySelector('.js-button');
   if (isStart === false) {
