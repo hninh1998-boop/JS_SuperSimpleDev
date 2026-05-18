@@ -150,8 +150,6 @@ document.querySelectorAll('.js-delete-link')
       updateCartQuantity();
     });
   });
-<<<<<<< HEAD
-=======
 
 function updateCartQuantity() {
   const cartQuantity = calculateCartQuantity();
@@ -202,4 +200,3 @@ document.querySelectorAll('.js-save-link')
       updateCartQuantity();
     });
   });
->>>>>>> 3c938be3af89efd4c86fb614655ba8eb325fd3df
